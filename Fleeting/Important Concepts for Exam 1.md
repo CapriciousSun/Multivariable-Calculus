@@ -118,5 +118,31 @@ For a function $f(x, y) = e^{xy - y^{2}}$ with a vector $\vec{v} = \langle 12, -
 \end{cases}$$
 #### $$D_{\vec{u}}f(2, 2) = \langle 2, -2 \rangle \cdot \left\langle  \frac{12}{13}, -\frac{5}{13}  \right\rangle = \frac{24}{13} + \frac{10}{13} = \frac{34}{13}$$
 
-## 14.7 Optimization in Several Variables
+## 14.6 Multivariable Calculus Chain Rules
+#### General Composite Functions
+Composite functions are functions that are composed of differentiable functions, who themselves could also be multivariable systems. So for a function $f(x, y)$, $x = x(s, t)$ and $y = y(s, t)$ would require the use of the chain rule for paths as mentioned earlier. The basic formula looks like 
+#### $$\begin{cases}
+\frac{\partial f}{\partial s} = \frac{\partial f}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial s} \\
+\frac{\partial f}{\partial t} = \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial t}
+\end{cases}$$
+If we let $\vec{r}(s, t) = \langle x(s, t), y(s, t) \rangle$, then the derivation method used for directional derivatives would work. 
 
+#### Implicit Differentiation
+Implicit differentiation involves creating a function of n + 1 variables, where n is the number of original variables. So the function would be $F(x, y, z(x, y)) = 0$ where $z$ is implicitly defined as a differentiable function of $x$ and $y$. 
+
+#### Example
+For a function $f(x, y, z(x, y)) = x^{3} + y^{3} + z^{3} + 6xyz = 1$, find $\frac{\partial z}{\partial x}$ and $\frac{\partial z}{\partial y}$. 
+#### $$\begin{cases}
+f_{x} = 3x^{2} + 6yz \\
+f_{y} = 3y^{2} + 6xz \\
+f_{z} = 3z^{2} + 6xy
+\end{cases}$$
+With these partial derivatives, the implicit derivatives are
+#### $$\begin{cases}
+Z_{x} = \frac{\partial z}{\partial x} = -\frac{F_{x}}{F_{z}} = - \frac{3x^{2} + 6y^{2}}{3z^{2} + 6xy} \\
+Z_{y} = \frac{\partial z}{\partial y} = - \frac{F_{y}}{F_{z}} = - \frac{3y^{2} + 6xz}{3z^{2} + 6xy}
+\end{cases}$$
+
+## 14.7 Optimization in Several Variables
+#### Critical Points
+A critical point is where a function could have a local extrema, thought it is not guaranteed. That's where the second derivative test and the discriminant comes into play. 
